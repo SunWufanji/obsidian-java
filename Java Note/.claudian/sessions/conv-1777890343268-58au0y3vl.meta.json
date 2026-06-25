@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777890343268-58au0y3vl",
+  "providerId": "claude",
+  "title": "Greet user in Chinese",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777890343271,
+  "updatedAt": 1777890353699,
+  "lastResponseAt": 1777890353699,
+  "sessionId": "70546eb1-bf04-4d8d-8530-5a16b5b7ad60",
+  "providerState": {
+    "providerSessionId": "70546eb1-bf04-4d8d-8530-5a16b5b7ad60"
+  },
+  "currentNote": "java集合面试题/00目录.md",
+  "usage": {
+    "model": "deepseek-v4-flash",
+    "inputTokens": 2720,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 19456,
+    "contextWindow": 200000,
+    "contextTokens": 22176,
+    "percentage": 11,
+    "contextWindowIsAuthoritative": true
+  }
+}

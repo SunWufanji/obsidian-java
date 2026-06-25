@@ -1,0 +1,166 @@
+[
+  {
+    "timestamp": "2026-05-16T12:32:09.953Z",
+    "version": 1,
+    "type": "init",
+    "description": "Init revision",
+    "delta": [
+      {
+        "insert": "# Redis 线程模型\n\n## 2.1 用户空间与内核空间\n\nLinux 将进程的寻址空间划分为两部分：\n\n- **用户空间（User Space）**：运行用户应用，权限受限（Ring3），不能直接访问硬件\n- **内核空间（Kernel Space）**：运行内核，拥有最高权限（Ring0），可操作所有硬件资源\n\n32 位系统中，4GB 虚拟地址空间：3GB 给用户空间，1GB 给内核空间。\n\n**IO 数据流转：**\n- 读数据：硬件 → 内核缓冲区 → 用户缓冲区\n- 写数据：用户缓冲区 → 内核缓冲区 → 硬件\n\n每次 IO 都涉及用户态和内核态的切换，这是 IO 慢的根本原因。\n\n---\n\n## 2.2 五种 IO 模型\n\n### 阻塞 IO（Blocking IO）\n![[Pasted image 20260516195331.png]]\n两个阶段全程阻塞：\n1. 等待数据就绪（内核从硬件读数据）→ 用户进程阻塞\n2. 数据从内核拷贝到用户空间 → 用户进程阻塞\n\n### 非阻塞 IO（Nonblocking IO）\n![[Pasted image 20260516203208.png]]\n\n- 阶段一：recvfrom 立即返回，数据未就绪时返回 error，用户进程**轮询**重试（CPU 空转）\n- 阶段二：数据就绪后拷贝，用户进程阻塞\n\n性能没有本质提升，CPU 利用率反而更差。\n\n### IO 多路复用（IO Multiplexing）\n\n用**一个线程**同时监听多个 FD（文件描述符），某个 FD 就绪时得到通知，再去读取数据。\n\n**三种实现：**\n\n| 实现 | FD 上限 | 通知方式 | 性能 |\n|------|---------|---------|------|\n| select | 1024 | 返回全部 FD，需遍历 | 较差 |\n| poll | 无上限（链表） | 返回全部 FD，需遍历 | 较差 |\n| epoll | 无上限（红黑树） | 只返回就绪 FD | 最优 |\n\n**epoll 原理：**\n- `epoll_create`：创建 epoll 实例，内含红黑树（监听的 FD）+ 链表（就绪的 FD）\n- `epoll_ctl`：将 FD 注册到红黑树，并设置回调函数（FD 就绪时自动加入链表）\n- `epoll_wait`：检查链表，有就绪 FD 则返回，无则等待\n\n**epoll 的两种触发模式：**\n- **LT（水平触发）**：只要 FD 中有数据，每次 epoll_wait 都通知（默认）\n- **ET（边沿触发）**：只在 FD 状态变化时通知一次，需一次性读完数据\n\n### 信号驱动 IO（Signal Driven IO）\n\n注册 SIGIO 信号处理函数，内核数据就绪时发信号通知，用户进程不阻塞等待。\n大量 IO 时信号队列可能溢出，实际使用较少。\n\n### 异步 IO（Asynchronous IO）\n\n两个阶段全程非阻塞，由内核完成数据拷贝后才通知用户进程。性能最高，但实现复杂。\n\n**五种模型对比：**\n\n| 模型 | 阶段一（等待数据） | 阶段二（拷贝数据） |\n|------|-----------------|-----------------|\n| 阻塞 IO | 阻塞 | 阻塞 |\n| 非阻塞 IO | 非阻塞（轮询） | 阻塞 |\n| IO 多路复用 | 阻塞（select/epoll） | 阻塞 |\n| 信号驱动 IO | 非阻塞 | 阻塞 |\n| 异步 IO | 非阻塞 | 非阻塞 |\n\n---\n\n## 2.3 Redis 是单线程还是多线程？\n\n**核心业务（命令处理）：单线程**\n\n**整体：多线程**（不同版本引入了多线程支持）\n\n| 版本 | 多线程内容 |\n|------|----------|\n| Redis v4.0 | 引入多线程异步处理耗时任务（如 `unlink` 异步删除） |\n| Redis v6.0 | 核心网络模型引入多线程，提升多核 CPU 利用率 |\n\n**为什么核心命令处理用单线程？**\n1. Redis 是纯内存操作，性能瓶颈在网络延迟，不在执行速度\n2. 多线程带来上下文切换开销\n3. 多线程需要加锁，实现复杂且性能下降\n\n---\n\n## 2.4 Redis 单线程网络模型\n\nRedis 基于 epoll 的事件循环处理所有客户端请求：\n\n```\n客户端连接\n    ↓\nIO 多路复用（epoll）\n    ↓\n连接应答处理器（accept）\n    ↓\n命令请求处理器（读取并解析命令）\n    ↓\n执行命令（操作内存数据）\n    ↓\n命令回复处理器（写出响应）\n```\n\n整个流程在单线程中串行执行，每个命令具备原子性。\n\n---\n\n## 面试简答\n\n**Q: Redis 为什么这么快？**\n\nA: 四个原因：纯内存操作；单线程无锁竞争；epoll IO 多路复用高效处理并发连接；底层数据结构经过专门优化（SDS、跳表等）。\n\n**Q: select、poll、epoll 的区别？**\n\nA:\n- select：FD 上限 1024，每次需拷贝全部 FD 到内核，返回后需遍历找就绪 FD\n- poll：用链表解决了 FD 上限问题，但仍需遍历\n- epoll：红黑树管理监听 FD，回调机制直接将就绪 FD 加入链表，epoll_wait 只返回就绪 FD，性能不随 FD 数量增加而下降\n\n**Q: Redis 6.0 为什么引入多线程？**\n\nA: Redis 6.0 之前单线程处理网络 IO，在高并发场景下网络读写成为瓶颈。6.0 将网络数据的读写交给多个 IO 线程并行处理，命令执行仍是单线程，在保证线程安全的同时提升了吞吐量。\n"
+      }
+    ],
+    "metadata": {
+      "size": 2433,
+      "hash": "c04270f7cf50f1bc01ca9d86a9fc5d4b388dc966a12f4015aa049a3045afe781"
+    }
+  },
+  {
+    "timestamp": "2026-05-16T12:36:19.944Z",
+    "version": 2,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 590
+      },
+      {
+        "insert": "**"
+      },
+      {
+        "retain": 21
+      },
+      {
+        "insert": "**"
+      }
+    ],
+    "metadata": {
+      "size": 2437,
+      "hash": "173747a8b81cf74292972d956d9ad26099e4311f7919512ed7664c2333e22d9a"
+    }
+  },
+  {
+    "timestamp": "2026-05-16T12:43:10.644Z",
+    "version": 3,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 646
+      },
+      {
+        "insert": "![[Pasted image 20260516204309.png]]"
+      },
+      {
+        "retain": 1791
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-16T13:00:05.133Z",
+    "version": 4,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 741
+      },
+      {
+        "insert": "\n![[Pasted image 20260516210003.png]]"
+      }
+    ],
+    "metadata": {
+      "size": 2510,
+      "hash": "c86bed75a32a44fdfc9eadf4ab4349c0790d6a645f6e3e91c5b5c65647951a38"
+    }
+  },
+  {
+    "timestamp": "2026-05-16T13:22:31.041Z",
+    "version": 5,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 1248
+      },
+      {
+        "insert": "![[Pasted image 20260516212148.png]]"
+      },
+      {
+        "retain": 134
+      },
+      {
+        "insert": "![[Pasted image 20260516212229.png]]"
+      }
+    ],
+    "metadata": {
+      "size": 2582,
+      "hash": "f7845e043580a3285596427b410ed7945682d0828e6948c3fabb0d46a223a172"
+    }
+  },
+  {
+    "timestamp": "2026-05-16T13:24:11.093Z",
+    "version": 6,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 1376
+      },
+      {
+        "insert": "（其他都是同步的）"
+      }
+    ],
+    "metadata": {
+      "size": 2591,
+      "hash": "d055d2744a9259a43ae4157e651c86b7c406668b0e5ef0d2c6e17d7b9f1bf9a0"
+    }
+  },
+  {
+    "timestamp": "2026-05-16T13:53:01.336Z",
+    "version": 7,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "insert": "  "
+      },
+      {
+        "retain": 2591
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-16T14:00:44.823Z",
+    "version": 8,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 957
+      },
+      {
+        "insert": "![[Pasted image 20260516220042.png]]"
+      },
+      {
+        "retain": 1636
+      }
+    ]
+  },
+  {
+    "timestamp": "2026-05-16T14:07:26.702Z",
+    "version": 9,
+    "type": "edit",
+    "description": "onEdit",
+    "delta": [
+      {
+        "retain": 2069
+      },
+      {
+        "insert": "![[Pasted image 20260516220056.png]]"
+      },
+      {
+        "retain": 560
+      }
+    ]
+  }
+]

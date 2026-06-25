@@ -1,0 +1,24 @@
+{
+  "id": "conv-1777717105513-tor5rvete",
+  "providerId": "claude",
+  "title": "Solve 142 Linked List Cycle II in Java",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777717105516,
+  "updatedAt": 1778147092649,
+  "lastResponseAt": 1777717223507,
+  "sessionId": "1228fc24-515e-449e-a299-fa971253a0b2",
+  "providerState": {
+    "providerSessionId": "1228fc24-515e-449e-a299-fa971253a0b2"
+  },
+  "currentNote": "算法题/链表/142. 环形链表 II.md",
+  "usage": {
+    "model": "deepseek-v4-flash",
+    "inputTokens": 2988,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 35456,
+    "contextWindow": 200000,
+    "contextTokens": 38444,
+    "percentage": 19,
+    "contextWindowIsAuthoritative": true
+  }
+}

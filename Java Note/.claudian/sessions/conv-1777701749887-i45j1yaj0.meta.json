@@ -1,0 +1,23 @@
+{
+  "id": "conv-1777701749887-i45j1yaj0",
+  "providerId": "claude",
+  "title": "Greet in Chinese",
+  "titleGenerationStatus": "success",
+  "createdAt": 1777701749887,
+  "updatedAt": 1778147088352,
+  "lastResponseAt": 1777890242202,
+  "sessionId": "312acfad-a504-4bbe-bd58-4ae9afc04af4",
+  "providerState": {
+    "providerSessionId": "312acfad-a504-4bbe-bd58-4ae9afc04af4"
+  },
+  "usage": {
+    "model": "deepseek-v4-flash",
+    "inputTokens": 159,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 43520,
+    "contextWindow": 200000,
+    "contextTokens": 43679,
+    "percentage": 22,
+    "contextWindowIsAuthoritative": true
+  }
+}
