@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/00目录.md",
+                "file": "操作系统/03内存管理.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00目录"
+              "title": "03内存管理"
             }
           }
         ]
@@ -84,8 +84,7 @@
               "title": "笔记本导航器"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
@@ -175,16 +174,6 @@
               "icon": "lucide-list",
               "title": "00目录 的大纲"
             }
-          },
-          {
-            "id": "1271735bb6620cc4",
-            "type": "leaf",
-            "state": {
-              "type": "claudian-view",
-              "state": {},
-              "icon": "bot",
-              "title": "Claudian"
-            }
           }
         ]
       }
@@ -205,18 +194,21 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:New drawing": false,
       "remotely-save:Remotely Save": false,
-      "claudian:Open Claudian": false,
-      "notebook-navigator:笔记本导航器": false
+      "notebook-navigator:笔记本导航器": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "a556ec2b33fa7b76",
   "lastOpenFiles": [
+    "操作系统/03内存管理.md.baiduyun.uploading.cfg",
+    "操作系统/00目录.md.baiduyun.uploading.cfg",
+    "操作系统/05IO系统.md",
     "操作系统/03内存管理.md",
+    "操作系统/00目录.md",
+    "操作系统/02进程管理.md.baiduyun.uploading.cfg",
     "操作系统/02进程管理.md",
     "操作系统/06Linux命令.md",
     "操作系统/04文件系统.md",
-    "操作系统/05IO系统.md",
-    "操作系统/00目录.md",
     "操作系统/01系统结构.md",
     "Claude Code面试助手工作规则.md",
     "codex使用说明.md",
@@ -236,7 +228,6 @@
     "MySQL/MySql面试题/01MySQL逻辑架构.md",
     "MySQL/SQL进阶面试题/03数据库设计与开发.md",
     "MySQL/SQL进阶面试题/01SQL 初级查询.md",
-    "Redis/Redis面试题/02Redis高可用面试题.md",
     "操作系统/02进程管理.md.tmp.297808.988e4e16eaf8",
     "操作系统/02进程管理.md.tmp.274032.ab2d0f70c863",
     "操作系统/02进程管理.md.tmp.274032.ea0ce8dc225a",
@@ -244,9 +235,6 @@
     "计算机网络/00目录/00计算机网络目录.md.tmp.72608.c97f0816d10d",
     "计算机网络/03-传输层/传输层面试题.md.tmp.72608.8e3a5890b38b",
     "计算机网络/02-应用层/HTTP.md.tmp.72608.69dd47d4116e",
-    "计算机网络/00目录/00计算机网络目录.md.tmp.72608.59355cad8977",
-    "计算机网络/07-网络攻击/网络攻击.md.tmp.72608.0ce2420209a2",
-    "计算机网络/07-网络攻击/网络攻击.md.tmp.72608.f1d45f104d4f",
     "00base/Pasted image 20260524103736.png",
     "00base/Pasted image 20260522215807.png",
     "00base/Pasted image 20260522215627.png",
