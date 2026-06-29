@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "操作系统/03内存管理.md",
+                "file": "操作系统/01系统结构.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "03内存管理"
+              "title": "01系统结构"
             }
           },
           {
@@ -214,12 +214,12 @@
   },
   "active": "a556ec2b33fa7b76",
   "lastOpenFiles": [
+    "操作系统/05IO系统.md",
+    "操作系统/04文件系统.md",
+    "操作系统/03内存管理.md",
     "操作系统/02进程管理.md",
     "操作系统/01系统结构.md",
     "操作系统/00目录.md",
-    "操作系统/03内存管理.md",
-    "操作系统/04文件系统.md",
-    "操作系统/05IO系统.md",
     "操作系统/06Linux命令.md",
     "操作系统/03内存管理.md.baiduyun.uploading.cfg",
     "操作系统/00目录.md.baiduyun.uploading.cfg",
