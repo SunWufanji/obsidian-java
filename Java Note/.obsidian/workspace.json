@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "算法题/链表/24. 两两交换链表中的节点.md",
+                "file": "操作系统/06Linux命令.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "24. 两两交换链表中的节点"
+              "title": "06Linux命令"
             }
           },
           {
@@ -214,13 +214,14 @@
   },
   "active": "a556ec2b33fa7b76",
   "lastOpenFiles": [
-    "操作系统/01系统结构.md",
     "操作系统/05IO系统.md",
-    "操作系统/04文件系统.md",
+    "操作系统/06Linux命令.md",
     "操作系统/03内存管理.md",
     "操作系统/02进程管理.md",
+    "操作系统/01系统结构.md",
     "操作系统/00目录.md",
-    "操作系统/06Linux命令.md",
+    "算法题/链表/24. 两两交换链表中的节点.md",
+    "操作系统/04文件系统.md",
     "操作系统/03内存管理.md.baiduyun.uploading.cfg",
     "操作系统/00目录.md.baiduyun.uploading.cfg",
     "操作系统/02进程管理.md.baiduyun.uploading.cfg",
