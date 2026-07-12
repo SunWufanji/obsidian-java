@@ -6,19 +6,136 @@
       {
         "id": "ea4d4202ad3f3642",
         "type": "tabs",
+        "dimension": 48.946784922394684,
         "children": [
           {
-            "id": "d2bee8f511544a21",
+            "id": "e0716b81337ffe0d",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "新标签页"
+            }
+          },
+          {
+            "id": "ddff84b1fba71d61",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08Spring全家桶/00-学习路线.md",
+                "file": "08Spring全家桶/01Spring/01-Spring核心与Spring MVC.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "00-学习路线"
+              "title": "01-Spring核心与Spring MVC"
+            }
+          },
+          {
+            "id": "4148cac941f70c65",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "08Spring全家桶/03MyBatis/01-MyBatis.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-MyBatis"
+            }
+          },
+          {
+            "id": "6e4fd217b5bf8e23",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01-Spring Cloud"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "c708457979d2003a",
+        "type": "tabs",
+        "dimension": 51.053215077605316,
+        "children": [
+          {
+            "id": "de4c352619680e78",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07操作系统/01系统结构.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "01系统结构"
+            }
+          },
+          {
+            "id": "638270584c932b4a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07操作系统/02进程管理.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "02进程管理"
+            }
+          },
+          {
+            "id": "0b414d797efc6d37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07操作系统/03内存管理.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "03内存管理"
+            }
+          },
+          {
+            "id": "e6c3b68406edf9f3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07操作系统/04文件系统.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "04文件系统"
+            }
+          },
+          {
+            "id": "0c69a648f3b75944",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "07操作系统/05IO系统.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "05IO系统"
             }
           }
         ]
@@ -104,7 +221,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "08Spring全家桶/00-学习路线.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +230,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "00-学习路线 的反向链接列表"
+              "title": "反向链接"
             }
           },
           {
@@ -198,24 +314,42 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "d2bee8f511544a21",
+  "active": "ddff84b1fba71d61",
   "lastOpenFiles": [
-    "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
-    "08Spring全家桶/03MyBatis/01-MyBatis.md",
-    "08Spring全家桶/02Spring Boot/01-Spring Boot.md",
     "08Spring全家桶/01Spring/01-Spring核心与Spring MVC.md",
-    "面试助手最终工作规则.md",
-    "08Spring全家桶/00-学习路线.md",
-    "07操作系统/06Linux命令.md",
+    "08Spring全家桶/02Spring Boot/01-Spring Boot.md",
+    "02java基础面试题/0001Java概述.md",
+    "03java集合面试题/05Collection接口-Set接口.md",
+    "03java集合面试题/06Map接口.md",
+    "03java集合面试题/07辅助工具类.md",
+    "03java集合面试题/04Collection接口-List接口.md",
+    "03java集合面试题/03集合容器概述.md",
+    "03java集合面试题/02集合注意事项.md",
+    "03java集合面试题/01基础知识点.md",
+    "08Spring全家桶/03MyBatis/01-MyBatis.md",
+    "07操作系统/01系统结构.md",
+    "07操作系统/05IO系统.md",
     "07操作系统/04文件系统.md",
+    "07操作系统/03内存管理.md",
+    "07操作系统/02进程管理.md",
+    "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
+    "Pasted image 20260712182412.png",
+    "Pasted image 20260712175315.png",
+    "Pasted image 20260712175226.png",
+    "Pasted image 20260712175017.png",
+    "Pasted image 20260712174826.png",
+    "Pasted image 20260712174725.png",
+    "Pasted image 20260712174634.png",
+    "Pasted image 20260712174132.png",
+    "Pasted image 20260712173827.png",
+    "Pasted image 20260712173112.png",
+    "08Spring全家桶/00-学习路线.md",
+    "面试助手最终工作规则.md",
+    "07操作系统/06Linux命令.md",
     "08Spring全家桶/04Spring Cloud",
     "08Spring全家桶/03MyBatis",
     "08Spring全家桶/02Spring Boot",
     "08Spring全家桶/01Spring",
-    "07操作系统/05IO系统.md",
-    "07操作系统/03内存管理.md",
-    "07操作系统/02进程管理.md",
-    "07操作系统/01系统结构.md",
     "Claude Code面试助手工作规则.md",
     "codex使用说明.md",
     "07操作系统/00目录.md",
@@ -224,28 +358,10 @@
     "操作系统/03内存管理.md.baiduyun.uploading.cfg",
     "操作系统/00目录.md.baiduyun.uploading.cfg",
     "操作系统/02进程管理.md.baiduyun.uploading.cfg",
-    "03java集合面试题/03集合容器概述.md",
     "03java集合面试题/00目录.md",
-    "03java集合面试题/02集合注意事项.md",
-    "03java集合面试题/01基础知识点.md",
-    "03java集合面试题/05Collection接口-Set接口.md",
-    "03java集合面试题/04Collection接口-List接口.md",
     "04MySQL/MySql面试题/08MySQL高可用.md",
-    "04MySQL/MySql面试题/07MySQL性能调优.md",
-    "04MySQL/MySql面试题/06MySQL日志.md",
-    "04MySQL/MySql面试题/0005MySQL锁.md",
     "操作系统/02进程管理.md.tmp.297808.988e4e16eaf8",
     "操作系统/02进程管理.md.tmp.274032.ab2d0f70c863",
-    "00base/Pasted image 20260524103736.png",
-    "00base/Pasted image 20260522215807.png",
-    "00base/Pasted image 20260522215627.png",
-    "00base/Pasted image 20260522214311.png",
-    "00base/Pasted image 20260522211857.png",
-    "00base/Pasted image 20260522201938.png",
-    "00base/Pasted image 20260522211007.png",
-    "00base/Pasted image 20260522202357.png",
-    "00base/Pasted image 20260522202258.png",
-    "00base/Pasted image 20260522200502.png",
     "未命名 2.canvas",
     "未命名.canvas",
     "未命名 1.canvas"
