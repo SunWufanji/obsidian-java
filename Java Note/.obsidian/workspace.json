@@ -9,16 +9,6 @@
         "dimension": 48.946784922394684,
         "children": [
           {
-            "id": "e0716b81337ffe0d",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "新标签页"
-            }
-          },
-          {
             "id": "ddff84b1fba71d61",
             "type": "leaf",
             "state": {
@@ -38,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "08Spring全家桶/03MyBatis/01-MyBatis.md",
+                "file": "06计算机网络/07-网络攻击/网络攻击.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-MyBatis"
+              "title": "网络攻击"
             }
           },
           {
@@ -72,14 +62,12 @@
             "id": "de4c352619680e78",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "07操作系统/01系统结构.md",
-                "mode": "source",
-                "source": false
+                "file": "00base/Pasted image 20260712172836.png"
               },
-              "icon": "lucide-file",
-              "title": "01系统结构"
+              "icon": "lucide-image",
+              "title": "Pasted image 20260712172836"
             }
           },
           {
@@ -314,35 +302,39 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ddff84b1fba71d61",
+  "active": "4148cac941f70c65",
   "lastOpenFiles": [
+    "06计算机网络/06-网络传输场景问题/网络传输场景问题.md",
+    "06计算机网络/05-数据链路层/数据链路层.md",
+    "06计算机网络/04-网络层/网络层.md",
+    "06计算机网络/03-传输层/传输层面试题.md",
+    "08Spring全家桶/03MyBatis/01-MyBatis.md",
+    "07操作系统/01系统结构.md",
+    "07操作系统/02进程管理.md",
+    "07操作系统/05IO系统.md",
+    "07操作系统/04文件系统.md",
+    "07操作系统/03内存管理.md",
+    "03java集合面试题/03集合容器概述.md",
     "08Spring全家桶/01Spring/01-Spring核心与Spring MVC.md",
+    "03java集合面试题/04Collection接口-List接口.md",
     "08Spring全家桶/02Spring Boot/01-Spring Boot.md",
+    "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
     "02java基础面试题/0001Java概述.md",
     "03java集合面试题/05Collection接口-Set接口.md",
     "03java集合面试题/06Map接口.md",
     "03java集合面试题/07辅助工具类.md",
-    "03java集合面试题/04Collection接口-List接口.md",
-    "03java集合面试题/03集合容器概述.md",
     "03java集合面试题/02集合注意事项.md",
     "03java集合面试题/01基础知识点.md",
-    "08Spring全家桶/03MyBatis/01-MyBatis.md",
-    "07操作系统/01系统结构.md",
-    "07操作系统/05IO系统.md",
-    "07操作系统/04文件系统.md",
-    "07操作系统/03内存管理.md",
-    "07操作系统/02进程管理.md",
-    "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
-    "Pasted image 20260712182412.png",
-    "Pasted image 20260712175315.png",
-    "Pasted image 20260712175226.png",
-    "Pasted image 20260712175017.png",
-    "Pasted image 20260712174826.png",
-    "Pasted image 20260712174725.png",
-    "Pasted image 20260712174634.png",
-    "Pasted image 20260712174132.png",
-    "Pasted image 20260712173827.png",
-    "Pasted image 20260712173112.png",
+    "00base/Pasted image 20260712182412.png",
+    "00base/Pasted image 20260712175315.png",
+    "00base/Pasted image 20260712175226.png",
+    "00base/Pasted image 20260712175017.png",
+    "00base/Pasted image 20260712174826.png",
+    "00base/Pasted image 20260712174725.png",
+    "00base/Pasted image 20260712174634.png",
+    "00base/Pasted image 20260712174132.png",
+    "00base/Pasted image 20260712173827.png",
+    "00base/Pasted image 20260712173112.png",
     "08Spring全家桶/00-学习路线.md",
     "面试助手最终工作规则.md",
     "07操作系统/06Linux命令.md",
@@ -352,14 +344,10 @@
     "08Spring全家桶/01Spring",
     "Claude Code面试助手工作规则.md",
     "codex使用说明.md",
-    "07操作系统/00目录.md",
     "08Spring全家桶",
-    "算法题/链表/24. 两两交换链表中的节点.md",
     "操作系统/03内存管理.md.baiduyun.uploading.cfg",
     "操作系统/00目录.md.baiduyun.uploading.cfg",
     "操作系统/02进程管理.md.baiduyun.uploading.cfg",
-    "03java集合面试题/00目录.md",
-    "04MySQL/MySql面试题/08MySQL高可用.md",
     "操作系统/02进程管理.md.tmp.297808.988e4e16eaf8",
     "操作系统/02进程管理.md.tmp.274032.ab2d0f70c863",
     "未命名 2.canvas",
