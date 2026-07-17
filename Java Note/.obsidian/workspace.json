@@ -6,7 +6,6 @@
       {
         "id": "ea4d4202ad3f3642",
         "type": "tabs",
-        "dimension": 48.946784922394684,
         "children": [
           {
             "id": "ddff84b1fba71d61",
@@ -28,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03java集合面试题/01基础知识点.md",
+                "file": "03java集合面试题/06Map接口.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01基础知识点"
+              "title": "06Map接口"
             }
           },
           {
@@ -52,81 +51,6 @@
           }
         ],
         "currentTab": 1
-      },
-      {
-        "id": "c708457979d2003a",
-        "type": "tabs",
-        "dimension": 51.053215077605316,
-        "children": [
-          {
-            "id": "de4c352619680e78",
-            "type": "leaf",
-            "state": {
-              "type": "image",
-              "state": {
-                "file": "00base/Pasted image 20260712172836.png"
-              },
-              "icon": "lucide-image",
-              "title": "Pasted image 20260712172836"
-            }
-          },
-          {
-            "id": "638270584c932b4a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07操作系统/02进程管理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "02进程管理"
-            }
-          },
-          {
-            "id": "0b414d797efc6d37",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07操作系统/03内存管理.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "03内存管理"
-            }
-          },
-          {
-            "id": "e6c3b68406edf9f3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07操作系统/04文件系统.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "04文件系统"
-            }
-          },
-          {
-            "id": "0c69a648f3b75944",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "07操作系统/05IO系统.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "05IO系统"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -189,8 +113,7 @@
               "title": "笔记本导航器"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -210,6 +133,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "03java集合面试题/06Map接口.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -219,7 +143,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "反向链接"
+              "title": "06Map接口 的反向链接列表"
             }
           },
           {
@@ -303,8 +227,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2cade6012cde175c",
+  "active": "4148cac941f70c65",
   "lastOpenFiles": [
+    "07操作系统/05IO系统.md",
+    "07操作系统/04文件系统.md",
+    "07操作系统/03内存管理.md",
+    "07操作系统/02进程管理.md",
+    "00base/Pasted image 20260712172836.png",
+    "03java集合面试题/06Map接口.md",
+    "10JVM",
+    "09并发编程",
+    "03java集合面试题/01基础知识点.md",
     "03java集合面试题/00目录.md",
     "08Spring全家桶/02Spring Boot/01-Spring Boot.md",
     "08Spring全家桶/01Spring/01-Spring核心与Spring MVC.md",
@@ -319,18 +252,11 @@
     "06计算机网络/04-网络层/网络层.md",
     "08Spring全家桶/03MyBatis/01-MyBatis.md",
     "07操作系统/01系统结构.md",
-    "07操作系统/02进程管理.md",
-    "07操作系统/05IO系统.md",
-    "07操作系统/04文件系统.md",
-    "07操作系统/03内存管理.md",
     "03java集合面试题/03集合容器概述.md",
     "03java集合面试题/04Collection接口-List接口.md",
     "08Spring全家桶/04Spring Cloud/01-Spring Cloud.md",
     "02java基础面试题/0001Java概述.md",
     "03java集合面试题/05Collection接口-Set接口.md",
-    "03java集合面试题/06Map接口.md",
-    "03java集合面试题/07辅助工具类.md",
-    "03java集合面试题/02集合注意事项.md",
     "00base/Pasted image 20260712182412.png",
     "00base/Pasted image 20260712175315.png",
     "00base/Pasted image 20260712175226.png",
@@ -340,7 +266,6 @@
     "00base/Pasted image 20260712174634.png",
     "00base/Pasted image 20260712174132.png",
     "00base/Pasted image 20260712173827.png",
-    "00base/Pasted image 20260712173112.png",
     "08Spring全家桶/04Spring Cloud",
     "08Spring全家桶/03MyBatis",
     "08Spring全家桶/02Spring Boot",
@@ -349,8 +274,6 @@
     "操作系统/03内存管理.md.baiduyun.uploading.cfg",
     "操作系统/00目录.md.baiduyun.uploading.cfg",
     "操作系统/02进程管理.md.baiduyun.uploading.cfg",
-    "操作系统/02进程管理.md.tmp.297808.988e4e16eaf8",
-    "操作系统/02进程管理.md.tmp.274032.ab2d0f70c863",
     "未命名 2.canvas",
     "未命名.canvas",
     "未命名 1.canvas"
