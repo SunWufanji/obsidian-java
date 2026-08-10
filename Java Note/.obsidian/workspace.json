@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "09并发编程/01-并发理论基础.md",
+                "file": "09并发编程/00-学习路线.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "01-并发理论基础"
+              "title": "00-学习路线"
             }
           },
           {
@@ -70,7 +70,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -229,6 +231,10 @@
   },
   "active": "4148cac941f70c65",
   "lastOpenFiles": [
+    "09并发编程/04-并发安全容器.md",
+    "09并发编程/03-常用锁与同步器.md",
+    "09并发编程/02-线程基础.md",
+    "09并发编程/01-并发理论基础.md",
     "10JVM/04-JVM调优与故障排查.md",
     "10JVM/03-Class文件与类加载.md",
     "10JVM/02-垃圾收集与内存分配.md",
@@ -237,10 +243,6 @@
     "09并发编程/00-学习路线.md",
     "03java集合面试题/06Map接口.md",
     "09并发编程/05-线程池与任务框架.md",
-    "09并发编程/04-并发安全容器.md",
-    "09并发编程/03-常用锁与同步器.md",
-    "09并发编程/02-线程基础.md",
-    "09并发编程/01-并发理论基础.md",
     "09并发编程/01-并发编程.md",
     "07操作系统/05IO系统.md",
     "07操作系统/04文件系统.md",
